@@ -25,6 +25,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # 用于生成 canonical 与 og:image 等绝对地址;如启用自定义域名,改为对应地址即可
+          VITE_SITE_URL: https://ethanzhm.github.io/mengjing-website
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

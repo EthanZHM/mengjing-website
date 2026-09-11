@@ -1,178 +1,414 @@
 export const navigation = [
   {
-    label: '走进萌净', path: '/about', eyebrow: 'ABOUT MENGJING',
+    label: '走进洗得亮',
+    path: '/about',
+    eyebrow: 'ABOUT XIDELIANG',
     children: [
-      ['集团简介', '/about/profile'], ['发展历程', '/about/history'],
-      ['企业文化', '/about/culture'], ['企业荣誉', '/about/honors'],
+      ['企业概况', '/about/profile'],
+      ['墨子企业文化', '/about/mozi-culture'],
+      ['五守价值观', '/about/five-values'],
+      ['十年发展战略', '/about/listing-plan'],
+      ['党建与人才', '/about/party-talent'],
     ],
   },
   {
-    label: '企业发展', path: '/development', eyebrow: 'DEVELOPMENT',
+    label: '研发智造',
+    path: '/rnd',
+    eyebrow: 'R&D & MANUFACTURING',
     children: [
-      ['发展战略', '/development/strategy'], ['绿色环保', '/development/green'],
-      ['科技研发', '/development/research'], ['品质保障', '/development/quality'],
+      ['1+2战略', '/rnd/strategy'],
+      ['石榴生物技术', '/rnd/pomegranate-bio'],
+      ['三期生产基地', '/rnd/production-bases'],
+      ['绿色智造', '/rnd/green-manufacturing'],
+      ['供应链协同', '/rnd/supply-chain'],
     ],
   },
   {
-    label: '产品中心', path: '/products', eyebrow: 'PRODUCTS',
+    label: '品质管控',
+    path: '/quality',
+    eyebrow: 'QUALITY CONTROL',
     children: [
-      ['宠物洗护系列', '/products/pet-care'], ['宠物除味系列', '/products/deodorization'],
-      ['宠物消毒清洁系列', '/products/disinfection'], ['宠物用品清洗系列', '/products/pet-supplies'],
-      ['家居洗涤系列', '/products/home-cleaning'], ['织物清洁系列', '/products/fabric-care'],
-      ['餐具清洁系列', '/products/dish-cleaning'],
+      ['品质管控体系', '/quality/cnas-system'],
+      ['五道分段质检', '/quality/five-stage-qc'],
+      ['一物一码溯源', '/quality/traceability'],
+      ['资质合规', '/quality/compliance'],
+      ['ESG可持续', '/quality/esg'],
     ],
   },
   {
-    label: '品牌家族', path: '/brands', eyebrow: 'OUR BRANDS',
+    label: '产品中心',
+    path: '/products',
+    eyebrow: 'PRODUCT CENTER',
     children: [
-      ['萌净宠护', '/brands/mengjing-care'], ['净爪星球', '/brands/paw-planet'],
-      ['悠宠生活', '/brands/youpet-life'], ['净家优选', '/brands/clean-home'],
+      ['家用织物洗护', '/products/fabric-care'],
+      ['厨卫清洁', '/products/kitchen-bath'],
+      ['个人护理', '/products/personal-care'],
+      ['B端商用定制', '/products/commercial-custom'],
     ],
   },
   {
-    label: '宠物健康生活', path: '/pet-life', eyebrow: 'PET WELLNESS',
+    label: '品牌动态',
+    path: '/news',
+    eyebrow: 'NEWSROOM',
     children: [
-      ['宠物洗护知识', '/pet-life/care'], ['养宠清洁指南', '/pet-life/cleaning-guide'],
-      ['宠物家庭清洁方案', '/pet-life/home-solutions'], ['常见问题', '/pet-life/faq'],
+      ['绿色日化项目', '/news/green-project'],
+      ['十年发展战略', '/news/strategy-2035'],
+      ['石榴生物技术', '/news/pomegranate-bio'],
+      ['一带一路业务', '/news/belt-road'],
     ],
   },
   {
-    label: '社会责任', path: '/responsibility', eyebrow: 'RESPONSIBILITY',
+    label: '合作招商',
+    path: '/cooperation',
+    eyebrow: 'COOPERATION',
     children: [
-      ['公益救助', '/responsibility/public-welfare'], ['流浪动物关爱', '/responsibility/animal-care'],
-      ['绿色生产', '/responsibility/green-production'], ['环保包装', '/responsibility/eco-packaging'],
-    ],
-  },
-  {
-    label: '资讯动态', path: '/news', eyebrow: 'NEWSROOM',
-    children: [
-      ['集团新闻', '/news/group'], ['品牌动态', '/news/brands'],
-      ['新品发布', '/news/products'], ['行业资讯', '/news/industry'],
-    ],
-  },
-  {
-    label: '加入萌净', path: '/careers', eyebrow: 'CAREERS',
-    children: [
-      ['人才理念', '/careers/philosophy'], ['员工成长', '/careers/growth'],
-      ['招聘岗位', '/careers/jobs'], ['联系我们', '/contact'],
+      ['经销商加盟', '/cooperation/dealer'],
+      ['商用定制', '/cooperation/commercial'],
+      ['投资者咨询', '/cooperation/investor'],
+      ['联系我们', '/contact'],
     ],
   },
 ];
 
 export const sectionMeta = {
   about: {
-    title: '走进萌净', eyebrow: 'ABOUT MENGJING',
-    intro: '以宠物清洁护理为起点，构建人与宠物友好共生的健康生活方式。',
-    statement: '我们相信，真正的洁净不仅关乎环境，也关乎每一份长久陪伴。',
+    title: '走进洗得亮',
+    eyebrow: 'ABOUT XIDELIANG',
+    intro: '山东洗得亮科技公司总部位于山东滕州，立足民族日化产业，坚持绿色健康使命，建设面向家庭、商用与跨境市场的绿色洗护科技企业。',
+    statement: '以墨子文化为精神根基，以“五守”价值观为经营准则，向百年国货日化品牌稳步前行。',
   },
-  development: {
-    title: '企业发展', eyebrow: 'SUSTAINABLE GROWTH',
-    intro: '以长期主义连接战略、研发、绿色生产与品质管理。',
-    statement: '让每一项创新经得起专业标准，也回应真实生活需求。',
+  rnd: {
+    title: '研发智造',
+    eyebrow: 'R&D & MANUFACTURING',
+    intro: '围绕“品牌引领、智能经营、绿色健康”的1+2战略，洗得亮持续建设石榴植物原料、绿色配方、智能制造和供应链协同能力。',
+    statement: '用植物原料、数智工厂与开放研发体系，形成国货日化的科技差异化。',
+  },
+  quality: {
+    title: '品质管控',
+    eyebrow: 'QUALITY CONTROL',
+    intro: '以“立质”为核心，构建研发、原料、生产、出厂、流通与售后全链路质量管控体系。',
+    statement: '让每一批产品有标准、有记录、可追溯、可复盘。',
   },
   products: {
-    title: '产品中心', eyebrow: 'PRODUCT CENTER',
-    intro: '覆盖宠物护理与家庭清洁的多场景产品矩阵。',
-    statement: '从温和洗护到深度清洁，为人与宠物共居空间提供专业选择。',
-  },
-  brands: {
-    title: '品牌家族', eyebrow: 'BRAND FAMILY',
-    intro: '多元品牌协同发展，共同服务更健康、更洁净的生活。',
-    statement: '不同定位，同一份对专业、品质与陪伴的坚持。',
-  },
-  'pet-life': {
-    title: '宠物健康生活', eyebrow: 'PET WELLNESS',
-    intro: '分享科学、易懂、可实践的宠物护理与家庭清洁知识。',
-    statement: '懂清洁，也更懂宠物生活。',
-  },
-  responsibility: {
-    title: '社会责任', eyebrow: 'SOCIAL RESPONSIBILITY',
-    intro: '关注每一个生命，也珍惜我们共同生活的环境。',
-    statement: '以持续行动，让洁净生活拥有更长远的价值。',
+    title: '产品中心',
+    eyebrow: 'PRODUCT CENTER',
+    intro: '产品体系覆盖家用织物洗护、厨卫清洁、个人护理与B端商用定制，服务家庭、酒店、洗衣店、学校医院后勤等多元场景。',
+    statement: '以石榴植物原料、低泡易漂洗、温和安全与绿色包装，构建更可信的洁净产品矩阵。',
   },
   news: {
-    title: '资讯动态', eyebrow: 'MENGJING NEWS',
-    intro: '记录集团发展、品牌行动、产品创新与行业观察。',
-    statement: '与每一次向前同行。',
+    title: '品牌动态',
+    eyebrow: 'NEWSROOM',
+    intro: '集中呈现企业发展、产品研发、品牌建设和跨境业务动态，记录洗得亮从区域品牌向全国化、国际化发展的关键节点。',
+    statement: '用准确、克制、可追溯的信息建立品牌公信力。',
   },
-  careers: {
-    title: '加入萌净', eyebrow: 'JOIN MENGJING',
-    intro: '与热爱宠物、关注健康生活的人一起创造长期价值。',
-    statement: '在彼此成就中，共同成长。',
+  cooperation: {
+    title: '合作招商',
+    eyebrow: 'COOPERATION',
+    intro: '面向经销商、商用客户、供应链伙伴和投资者开放合作入口，共同建设绿色日化产业生态。',
+    statement: '以产品力、供应链、品质体系和长期品牌规划，支持伙伴共同成长。',
   },
 };
 
-const seriesDetails = [
-  { group: 'pet', en: 'PET BATH & CARE', summary: '温和洁净，关注不同宠物的皮肤与毛发需求。', scene: '日常洗护 · 毛发护理' },
-  { group: 'pet', en: 'PET DEODORIZATION', summary: '从异味来源与使用场景出发，改善宠物家庭空气体验。', scene: '空间净味 · 局部除味' },
-  { group: 'pet', en: 'PET HYGIENE', summary: '兼顾清洁效率与宠物家庭使用体验，守护共居环境。', scene: '环境清洁 · 日常卫生' },
-  { group: 'pet', en: 'PET SUPPLIES CARE', summary: '针对窝垫、玩具等高频用品，提供细分清洗方案。', scene: '窝垫清洗 · 玩具清洁' },
-  { group: 'home', en: 'HOME LAUNDRY', summary: '面向人宠共居家庭的日常洗涤与洁净需求。', scene: '日常洗衣 · 家庭清洁' },
-  { group: 'home', en: 'FABRIC CARE', summary: '关注沙发、地毯与宠物织物的清洁和气味管理。', scene: '织物护理 · 局部清洁' },
-  { group: 'home', en: 'DISH CARE', summary: '针对宠物与家庭餐具，提供易冲洗的洁净选择。', scene: '餐具清洁 · 油污管理' },
+export const heroStats = [
+  ['10+', '余年深耕绿色日化'],
+  ['1+2', '品牌引领 · 智能经营 · 绿色健康'],
+  ['三期', '绿色智造基地 · 从洗衣液到多品类'],
+  ['五守', '守信 · 守正 · 守质 · 守真 · 守新'],
 ];
 
-export const productSeries = navigation[2].children.map(([title, path], index) => ({
-  title,
-  path,
-  number: String(index + 1).padStart(2, '0'),
-  ...seriesDetails[index],
-}));
-
-export const products = [
-  { slug: 'gentle-shampoo', name: '宠物温和净护香波', series: 'pet-care', tag: '温和洗护', spec: '500mL', careType: '日常护理', audience: '犬猫适用', form: '液体', brand: '萌净宠护', brandSlug: 'mengjing-care', scenario: '宠物日常沐浴与毛发清洁', benefits: ['温和清洁', '易于冲洗', '柔顺毛发'] },
-  { slug: 'paw-cleanser', name: '日常免洗洁足泡沫', series: 'pet-care', tag: '免洗洁足', spec: '150mL', careType: '局部清洁', audience: '犬猫适用', form: '泡沫', brand: '净爪星球', brandSlug: 'paw-planet', scenario: '外出回家后的足部清洁', benefits: ['按压起泡', '无需水洗', '日常便携'] },
-  { slug: 'coat-conditioner', name: '宠物柔顺护毛素', series: 'pet-care', tag: '毛发护理', spec: '300mL', careType: '深度护理', audience: '犬猫适用', form: '乳液', brand: '萌净宠护', brandSlug: 'mengjing-care', scenario: '洗护后的毛发柔顺护理', benefits: ['顺滑毛发', '减少打结', '护理毛鳞片'] },
-  { slug: 'space-deodorizer', name: '宠物空间净味喷雾', series: 'deodorization', tag: '空间除味', spec: '300mL', careType: '环境管理', audience: '宠物家庭', form: '喷雾', brand: '悠宠生活', brandSlug: 'youpet-life', scenario: '客厅、宠物活动区日常净味', benefits: ['快速喷洒', '气味管理', '多场景适用'] },
-  { slug: 'litter-deodorizer', name: '猫砂盆净味护理喷雾', series: 'deodorization', tag: '局部净味', spec: '250mL', careType: '局部清洁', audience: '养猫家庭', form: '喷雾', brand: '净爪星球', brandSlug: 'paw-planet', scenario: '猫砂盆及周边区域气味管理', benefits: ['定点净味', '使用便捷', '适合高频区域'] },
-  { slug: 'surface-cleaner', name: '宠物家庭表面清洁液', series: 'disinfection', tag: '表面清洁', spec: '500mL', careType: '环境管理', audience: '宠物家庭', form: '喷雾', brand: '萌净宠护', brandSlug: 'mengjing-care', scenario: '地面与非食品接触表面清洁', benefits: ['日常洁净', '场景明确', '使用规范'] },
-  { slug: 'floor-cleaner', name: '人宠共居地板清洁液', series: 'disinfection', tag: '地面清洁', spec: '1L', careType: '深度清洁', audience: '宠物家庭', form: '浓缩液', brand: '净家优选', brandSlug: 'clean-home', scenario: '瓷砖及适用地板的周期清洁', benefits: ['集中清洁', '易于稀释', '减少残留'] },
-  { slug: 'toy-cleaner', name: '宠物玩具清洗液', series: 'pet-supplies', tag: '用品清洗', spec: '500mL', careType: '日常护理', audience: '犬猫适用', form: '液体', brand: '萌净宠护', brandSlug: 'mengjing-care', scenario: '宠物玩具与日常用品清洗', benefits: ['针对用品', '易漂洗', '清晰用量'] },
-  { slug: 'bed-laundry', name: '宠物窝垫洗涤液', series: 'pet-supplies', tag: '窝垫清洁', spec: '1L', careType: '深度清洁', audience: '宠物家庭', form: '浓缩液', brand: '悠宠生活', brandSlug: 'youpet-life', scenario: '窝垫、毯子与可水洗用品', benefits: ['深层洁净', '气味管理', '机洗手洗'] },
-  { slug: 'home-laundry', name: '宠物家庭洗衣液', series: 'home-cleaning', tag: '家居洗涤', spec: '2L', careType: '日常护理', audience: '人宠共居家庭', form: '浓缩液', brand: '净家优选', brandSlug: 'clean-home', scenario: '家庭衣物与可水洗织物', benefits: ['日常洗涤', '低泡易漂', '家庭适用'] },
-  { slug: 'stain-prewash', name: '衣物局部预洗液', series: 'home-cleaning', tag: '局部去渍', spec: '300mL', careType: '局部清洁', audience: '家庭适用', form: '液体', brand: '净家优选', brandSlug: 'clean-home', scenario: '衣物可水洗区域的局部预处理', benefits: ['精准涂抹', '预洗处理', '使用方便'] },
-  { slug: 'fabric-cleaner', name: '宠物织物洁净液', series: 'fabric-care', tag: '织物清洁', spec: '1L', careType: '深度清洁', audience: '宠物家庭', form: '液体', brand: '悠宠生活', brandSlug: 'youpet-life', scenario: '沙发套、地毯与可洗织物', benefits: ['织物护理', '气味管理', '适用多场景'] },
-  { slug: 'fabric-mist', name: '家居织物清新喷雾', series: 'fabric-care', tag: '日常清新', spec: '300mL', careType: '环境管理', audience: '家庭适用', form: '喷雾', brand: '净家优选', brandSlug: 'clean-home', scenario: '窗帘、沙发等织物日常清新', benefits: ['均匀喷雾', '使用轻便', '空间清新'] },
-  { slug: 'bowl-cleaner', name: '宠物餐具清洁液', series: 'dish-cleaning', tag: '餐具清洁', spec: '500mL', careType: '日常护理', audience: '犬猫适用', form: '液体', brand: '萌净宠护', brandSlug: 'mengjing-care', scenario: '宠物食盆、水碗与适用餐具', benefits: ['针对油污', '易于冲洗', '按压取量'] },
-  { slug: 'home-dish-cleaner', name: '家庭餐具清洁液', series: 'dish-cleaning', tag: '家庭清洁', spec: '500mL', careType: '日常护理', audience: '家庭适用', form: '液体', brand: '净家优选', brandSlug: 'clean-home', scenario: '家庭餐具日常手洗', benefits: ['日常去污', '泡沫适中', '易冲洗'] },
+export const homeHighlights = [
+  {
+    title: '墨子文化与五守价值观',
+    text: '以墨子“志不强者智不达，言不信者行不果”为座右铭，将守信、守正、守质、守真、守新落实到产品、管理与合作之中。',
+    path: '/about/mozi-culture',
+  },
+  {
+    title: '石榴+生物科技平台',
+    text: '依托枣庄石榴产业资源，探索石榴皮多酚、石榴籽油等植物活性成分在护色、抗氧化、抗菌等方向的应用。',
+    path: '/rnd/pomegranate-bio',
+  },
+  {
+    title: '全链路品质管控',
+    text: '围绕原料筛查、配方验证、过程巡检、成品放行和售后闭环，持续完善质量管理体系。',
+    path: '/quality/cnas-system',
+  },
 ];
 
-export const brands = [
-  { slug: 'mengjing-care', name: '萌净宠护', en: 'MENGJING CARE', positioning: '专业、温和的宠物清洁护理', color: 'sage', audience: '重视成分与护理体验的宠物家庭', territory: '宠物洗护 · 餐具与用品清洁', promise: '让专业护理回到每一天', description: '以宠物自身护理为核心，关注洗护、用品与餐具等高频清洁场景。' },
-  { slug: 'paw-planet', name: '净爪星球', en: 'PAW PLANET', positioning: '轻松有活力的宠物日常清洁', color: 'blue', audience: '年轻养宠人与城市宠物家庭', territory: '免洗清洁 · 局部护理 · 日常净味', promise: '轻松处理养宠日常小问题', description: '聚焦外出回家、局部清洁和气味管理，让高频护理更轻便。' },
-  { slug: 'youpet-life', name: '悠宠生活', en: 'YOUPET LIFE', positioning: '围绕陪伴的品质宠物生活', color: 'sand', audience: '关注人宠共居品质的家庭', territory: '空间净味 · 织物与窝垫护理', promise: '把陪伴安放在舒适空间里', description: '从共同生活的空间出发，关注织物、窝垫与家庭气味管理。' },
-  { slug: 'clean-home', name: '净家优选', en: 'CLEAN HOME', positioning: '安心实用的家庭清洁方案', color: 'mint', audience: '人宠共居与日常家庭用户', territory: '家居洗涤 · 地面 · 餐具清洁', promise: '让家庭洁净简单而可靠', description: '服务家庭高频清洁任务，强调清晰用法、稳定体验与实用选择。' },
+export const values = [
+  ['守信', '以诚信立企，承诺可验证，合作有边界。'],
+  ['守正', '坚持正确产品观，拒绝概念堆砌和短期行为。'],
+  ['守质', '把产品质量放在首位，围绕清洁力、安全性与稳定性持续改进。'],
+  ['守真', '真实表达功效、资质、数据和进展，杜绝夸大宣传。'],
+  ['守新', '面向AI时代、数智经营和绿色制造持续创新。'],
 ];
 
-export const articles = [
-  { slug: 'bath-frequency', category: 'care', type: '宠物洗护知识', title: '不同季节，应该多久给宠物洗一次澡？', date: '2026.05.24', updated: '2026.05.28', read: '6 分钟', topic: '洗护频率', petType: '犬猫通用', scenario: '居家洗护', summary: '结合宠物类型、活动频率、皮肤状态与季节变化，判断更合适的洗护节奏。', reviewer: '萌净宠物护理内容组' },
-  { slug: 'odor-management', category: 'cleaning-guide', type: '养宠清洁指南', title: '宠物家庭异味管理，从这三个区域开始', date: '2026.05.12', updated: '2026.05.12', read: '5 分钟', topic: '气味管理', petType: '宠物家庭', scenario: '客厅 · 窝垫 · 猫砂区', summary: '先找到气味来源，再分别处理高频活动区、织物和排泄区域。', reviewer: '萌净家庭清洁内容组' },
-  { slug: 'shared-home', category: 'home-solutions', type: '家庭清洁方案', title: '人宠共居空间的一周清洁计划', date: '2026.04.28', updated: '2026.05.06', read: '8 分钟', topic: '周期清洁', petType: '人宠共居', scenario: '全屋清洁', summary: '按每日、每周与按需任务拆分清洁工作，减少临时集中处理的压力。', reviewer: '萌净健康生活编辑部' },
-  { slug: 'paw-care', category: 'care', type: '宠物洗护知识', title: '外出回家后，如何正确清洁宠物足部？', date: '2026.04.16', updated: '2026.04.18', read: '4 分钟', topic: '足部护理', petType: '犬类为主', scenario: '外出回家', summary: '根据路面环境和足部状态选择擦拭、免洗或水洗，避免不必要的过度清洁。', reviewer: '萌净宠物护理内容组' },
+export const honors = [
+  ['全国守合同重信用企业', '诚信经营 · 合规履约'],
+  ['全国文明单位', '精神文明与组织治理'],
+  ['6+', '授权发明专利累计'],
+  ['8项', '省级青年文明号等荣誉'],
+];
+
+export const milestones = [
+  ['创立期', '诞生于科圣墨子故里山东滕州，坚守“绿色健康”使命。'],
+  ['十余年', '深耕民族日化，推出织物洗护、餐具清洁、宠物护理、个人护理等品类。'],
+  ['2026-2028', '筑基固本：打造“四型”产品标杆，完善质量体系与商业模式验证。'],
+  ['2029-2031', '规模扩张：推进全国化布局、多品牌发力与数智化经营。'],
+  ['2032-2035', '生态协同：国际化初具规模，治理水平对标公众公司。'],
+];
+
+export const detailPages = {
+  'about/profile': {
+    title: '企业概况',
+    eyebrow: 'COMPANY PROFILE',
+    lead: '山东洗得亮科技公司总部位于山东滕州，围绕织物洗护、餐具清洁、个人护理、宠物护理与商用清洁等方向，发展绿色健康日化产品与服务。',
+    points: [
+      ['企业定位', '面向中国家庭和商用清洁场景，提供绿色环保型日化液体洗涤产品与定制化清洁解决方案。'],
+      ['发展愿景', '以“世界知名品牌，百年洗得亮”为长期愿景，稳步推进品牌全国化、数智化经营和资本规范化建设。'],
+      ['发展路径', '以绿色健康为使命，以品牌引领为核心，协同推进智能经营、产品创新、品质建设与绿色制造。'],
+    ],
+  },
+  'about/mozi-culture': {
+    title: '墨子企业文化',
+    eyebrow: 'MOZI CULTURE',
+    lead: '洗得亮诞生于科圣墨子故里山东滕州，汲取墨子“尚贤”“兼爱”的思想资源，形成重人才、重诚信、重协作、重实干的管理理念。',
+    points: [
+      ['文化座右铭', '志不强者智不达，言不信者行不果。企业以坚定目标与诚信行动支撑长期品牌建设。'],
+      ['尚贤理念', '尊重专业人才与实干贡献，建设研发、生产、品质、数智化、品牌和国际业务复合型团队。'],
+      ['兼爱精神', '在用户、员工、伙伴与社会之间建立长期互信，让清洁产品服务更广泛的健康生活需求。'],
+    ],
+  },
+  'about/five-values': {
+    title: '五守价值观',
+    eyebrow: 'FIVE VALUES',
+    lead: '守信、守正、守质、守真、守新，是洗得亮面向产品、品牌、组织与合作的共同准则。',
+    points: values,
+  },
+  'about/listing-plan': {
+    title: '十年发展战略',
+    eyebrow: '2026–2035 STRATEGY',
+    lead: '2026-2035十年发展战略以筑基固本、规模扩张、生态协同为主线，持续提升品牌、产品、组织与治理能力。',
+    points: [
+      ['2026-2028 筑基固本', '打造“四型”产品标杆，完善股份制改造、战略融资、质量体系和商业模式验证。'],
+      ['2029-2031 规模扩张', '推进全国化布局、多品牌发力、电商与数智化能力建设，形成更稳定的营收与利润基础。'],
+      ['2032-2035 生态协同', '提升治理水平，推动洗护生态圈、国际化业务和资本市场规范化准备。'],
+    ],
+  },
+  'about/party-talent': {
+    title: '党建与人才',
+    eyebrow: 'PARTY BUILDING & TALENT',
+    lead: '公司规划以高质量党建引领高质量发展，围绕企业大学、技能大师工作室、青年创新大赛、职工暖心小家等项目建设人才体系。',
+    points: [
+      ['党建融合', '推动党建与产品创新、品质管控、渠道拓展、用户服务同频共振，形成“抓党建、强品牌、促增长”的工作逻辑。'],
+      ['人才高地', '实施管理层、骨干层、潜力新星三类人才计划，引进品牌、研发、供应链、数智化、合规风控等关键人才。'],
+      ['组织关怀', '建设职工暖心小家、红色匠心传承馆和青年岗位建功体系，增强员工归属感和职业荣誉感。'],
+    ],
+  },
+  'rnd/strategy': {
+    title: '1+2战略',
+    eyebrow: '1+2 STRATEGY',
+    lead: '进入AI时代，洗得亮以“1+2”战略为牵引：一个核心是品牌引领，两大引擎是智能经营与绿色健康。',
+    points: [
+      ['品牌引领', '以清晰品牌定位、正确产品观和全国化传播，建立长期可信赖的国货日化品牌心智。'],
+      ['智能经营', '推进ERP、MES、WMS、PLM、质量追溯和客户管理系统协同，提升研发、生产、渠道与服务效率。'],
+      ['绿色健康', '围绕植物原料、低泡节水、可降解包装、碳足迹管理和ESG披露，建立可持续发展能力。'],
+    ],
+  },
+  'rnd/pomegranate-bio': {
+    title: '石榴生物技术',
+    eyebrow: 'POMEGRANATE BIO-TECH',
+    lead: '依托枣庄石榴产业资源，洗得亮规划建立“石榴+”生物科技平台，探索区域特色植物原料在绿色洗护中的应用。',
+    points: [
+      ['植物活性方向', '聚焦石榴皮多酚、石榴籽油等成分在抗氧化、抗静电、护色、抗菌等方向的应用研究。'],
+      ['产学研协同', '深化与本地科研机构合作，建设联合实验室和中试验证平台，加速实验室成果向工业化产品转化。'],
+      ['核心单品储备', '规划石榴酵素洗衣液、石榴多酚护色精华等差异化大单品，形成“原料-技术-产品”闭环。'],
+    ],
+  },
+  'rnd/production-bases': {
+    title: '三期生产基地',
+    eyebrow: 'PRODUCTION BASES',
+    lead: '绿色日化项目规划分三期推进，从新型高效洗衣液切入，逐步拓展厨卫家居、个人护理和GMP级生产能力。',
+    points: [
+      ['一期基地', '聚焦新型高效洗衣液，服务家庭、酒店、洗衣店等高频洗护场景，强调强力去污、温和护衣、低泡易漂洗。'],
+      ['二期基地', '拓展厨房洁护、家居洁护、卫浴洁护、水垢清除、除湿除味等系列，满足家庭绿色环保高端需求。'],
+      ['三期基地', '面向洗手液、洗发水、沐浴露、洗洁精、洗面奶、面膜、香水等多品类，推进相应生产能力建设。'],
+    ],
+  },
+  'rnd/green-manufacturing': {
+    title: '绿色智造',
+    eyebrow: 'GREEN MANUFACTURING',
+    lead: '以智能制造、绿色制造、服务型制造为方向，逐步建设可视化、自动化、低碳化的生产体系。',
+    points: [
+      ['智能工厂', '规划5G+工业互联网、APC先进过程控制、MES制造执行系统和AGV智能物流等能力。'],
+      ['绿色工厂', '推进节水配方、绿电使用、排放管控和碳足迹核算，探索碳中和试点。'],
+      ['中试验证', '建设概念验证与中试验证中心，缩短科研成果从实验室到规模化生产的周期。'],
+    ],
+  },
+  'rnd/supply-chain': {
+    title: '供应链协同',
+    eyebrow: 'SUPPLY CHAIN',
+    lead: '洗得亮规划建设开放协同的绿色供应链，连接央企中轻日化供应资源、优质原料伙伴、设备企业和全国渠道网络。',
+    points: [
+      ['央企与专业伙伴协同', '围绕配方、原料、工艺、检测和标准化建设，与中轻日化等专业供应链资源建立协同接口。'],
+      ['五绿行动', '推进绿色原料、绿色生产、绿色包装、绿色物流和绿色消费，把环保理念前置到供应链管理中。'],
+      ['三型供应链', '打造安全型、效率型、韧性型供应链，降低质量波动、交付波动和成本波动风险。'],
+    ],
+  },
+  'quality/cnas-system': {
+    title: '品质管控体系',
+    eyebrow: 'QUALITY MANAGEMENT',
+    lead: '围绕原料、配方、生产、成品、流通与售后建立全过程质量管理机制，让关键环节有标准、有记录、可追溯。',
+    points: [
+      ['标准先行', '依据国家标准、行业规范与企业质量要求，围绕稳定性、微生物、去污性能和安全指标开展过程管理。'],
+      ['检测验证', '围绕原料筛查、配方测试、生产抽检、成品检验和批次留样形成相互衔接的验证流程。'],
+      ['持续改进', '通过抽检、留样、客诉复盘和PDCA循环，推动质量问题快速定位和系统改进。'],
+    ],
+  },
+  'quality/five-stage-qc': {
+    title: '五道分段质检',
+    eyebrow: 'FIVE-STAGE QC',
+    lead: '质量控制覆盖研发定型、原料入厂、生产过程、成品放行和市场反馈五个关键环节。',
+    points: [
+      ['研发前置', '配方定型前完成原料安全筛查、稳定性测试、性能量化检测和人体安全验证。'],
+      ['过程控制', '执行原料资质核验、批次抽检、在线监控、首件确认、过程巡检、灌装包装全检。'],
+      ['成品放行', '出厂前完成感官、理化、安全项、使用性能等强制检测，并建立批次留样制度。'],
+    ],
+  },
+  'quality/traceability': {
+    title: '一物一码溯源',
+    eyebrow: 'ONE ITEM ONE CODE',
+    lead: '一物一码系统采用瓶、箱、垛三级关联，打通原料、生产、质检、仓储、物流和终端扫码数据。',
+    points: [
+      ['数字身份', '每件产品拥有唯一二维码，可用于溯源查询、防伪验证、防窜货和售后追踪。'],
+      ['消费者查询', '扫码可查看产品基础信息、原料溯源、生产记录、出厂质检和流通真伪信息。'],
+      ['企业后台', '品控、仓储、渠道、售后按权限查看追溯档案，支持批号检索、召回管理和窜货预警。'],
+    ],
+  },
+  'quality/compliance': {
+    title: '资质合规',
+    eyebrow: 'COMPLIANCE',
+    lead: '以产品质量、供应链管理和规范经营为基础，将合规要求落实到原料采购、生产管理、产品信息与品牌传播全过程。',
+    points: [
+      ['产品合规', '围绕产品标准、配方管理、标签信息和质量记录建立清晰规范的内部管理流程。'],
+      ['供应商资质', '对供应商三证、COA检测报告、安全说明书进行核验，纳入年度评审和淘汰机制。'],
+      ['品牌表达', '坚持真实、准确、克制的沟通原则，让产品信息、适用场景和使用方式清晰易懂。'],
+    ],
+  },
+  'quality/esg': {
+    title: 'ESG可持续',
+    eyebrow: 'ESG',
+    lead: '洗得亮规划建立环境、社会及公司治理体系，围绕绿色原料、节水低碳、员工成长、乡村振兴和透明披露持续推进。',
+    points: [
+      ['环境责任', '探索RSPO认证原料、石榴种植合作社、包装减量、补充装和生产过程碳足迹核算。'],
+      ['社会责任', '开展社区服务、清洁健康科普、员工关怀、技能培训和青年创新行动。'],
+      ['治理责任', '规划董事会下设战略与ESG委员会，定期发布ESG报告并接受社会监督。'],
+    ],
+  },
+};
+
+export const productCategories = [
+  {
+    slug: 'fabric-care',
+    title: '家用织物洗护',
+    en: 'FABRIC CARE',
+    summary: '覆盖新型高效洗衣液、护色柔顺、冷水速净、母婴专用、除菌低残留等方向。',
+    products: ['新型高效洗衣液', '石榴酵素洗衣液', '石榴多酚护色精华', '冷水速净洗衣液', '母婴专用洗衣液'],
+    scene: '家庭洗衣 · 酒店布草 · 洗衣店基础洗护',
+  },
+  {
+    slug: 'kitchen-bath',
+    title: '厨卫清洁',
+    en: 'KITCHEN & BATH',
+    summary: '面向厨房油污、餐具清洁、卫浴水垢、家居表面和除湿除味等高频清洁场景。',
+    products: ['餐具洁护洗洁精', '厨房重油污清洁液', '卫浴水垢清洁剂', '家居多用途清洁液', '空间除味护理喷雾'],
+    scene: '厨房 · 卫浴 · 全屋清洁 · 储物空间',
+  },
+  {
+    slug: 'personal-care',
+    title: '个人护理',
+    en: 'PERSONAL CARE',
+    summary: '三期规划面向洗手液、洗发水、沐浴露、洗面奶、面膜、香水等中高端个人护理产品。',
+    products: ['温和洁净洗手液', '洗发水', '沐浴露', '洗面奶', '面膜与香氛产品'],
+    scene: '家庭个人护理 · 商旅洗护 · 中高端消费',
+  },
+  {
+    slug: 'commercial-custom',
+    title: 'B端商用定制',
+    en: 'COMMERCIAL CUSTOM',
+    summary: '为酒店、洗衣工厂、学校医院后勤、物业保洁和跨境客户提供料液、包装、配方和服务方案定制。',
+    products: ['酒店布草洗护方案', '洗衣工厂大包装料液', '学校医院后勤清洁方案', 'OEM/ODM定制', '跨境渠道产品定制'],
+    scene: '酒店 · 洗衣工厂 · 医院学校 · 物业 · 跨境电商',
+  },
+];
+
+export const roadmap = [
+  ['一期', '新型高效洗衣液', '2-5亩', '聚焦高效去污、温和护衣与低泡易漂洗'],
+  ['二期', '厨卫、家居、卫浴、水垢、除湿除味', '2-5亩', '扩大家庭绿色清洁产品矩阵'],
+  ['三期', '个人护理与GMP级无尘无菌车间', '约10亩', '面向中高端洗护与多品类集团化发展'],
+];
+
+export const qualityFlow = [
+  '研发前置验证',
+  '原料入厂三重检验',
+  '自动化产线监控',
+  '成品出厂全项放行',
+  '流通追溯与售后闭环',
+];
+
+export const cooperationTypes = [
+  {
+    slug: 'dealer',
+    title: '经销商加盟',
+    summary: '面向区域经销、商超便利、电商平台、社区体验店开放合作，提供产品矩阵、品牌素材、渠道政策和培训支持。',
+    fields: ['所在区域', '现有渠道', '意向品类', '年销售能力'],
+  },
+  {
+    slug: 'commercial',
+    title: '商用定制',
+    summary: '面向酒店、洗衣工厂、学校医院后勤、物业保洁等客户，提供大包装、定制配方、包装设计和长期供货方案。',
+    fields: ['客户类型', '月度用量', '定制需求', '交付区域'],
+  },
+  {
+    slug: 'investor',
+    title: '投资者咨询',
+    summary: '面向产业资本、地方基金、供应链伙伴和长期战略投资者，开放项目资料申请与战略沟通入口。',
+    fields: ['机构名称', '投资方向', '关注阶段', '资料需求'],
+  },
 ];
 
 export const newsItems = [
-  { slug: 'green-factory-plan', category: 'group', type: '集团新闻', title: '萌净启动绿色生产升级计划', date: '2026.06.06', source: '萌净集团', location: '苏州', summary: '围绕能源管理、生产流程与包装减量，推进可持续生产体系建设。', related: '绿色生产' },
-  { slug: 'new-care-line', category: 'products', type: '新品发布', title: '全新宠物温和洗护系列正式发布', date: '2026.05.18', source: '萌净产品中心', location: '上海', summary: '从真实宠物护理需求出发，带来更细分的日常洗护选择。', related: '宠物洗护系列' },
-  { slug: 'animal-care-action', category: 'brands', type: '品牌动态', title: '净爪星球携手公益伙伴开展关爱行动', date: '2026.04.22', source: '净爪星球', location: '上海', summary: '通过物资支持与科学养护分享，为待领养动物提供持续帮助。', related: '流浪动物关爱' },
-  { slug: 'clean-living-report', category: 'industry', type: '行业资讯', title: '人宠共居推动家庭清洁需求走向精细化', date: '2026.04.08', source: '萌净研究观察', location: '中国', summary: '关注宠物友好家庭在产品、安全与使用场景方面的新需求。', related: '宠物家庭清洁方案' },
+  {
+    slug: 'green-project',
+    category: '公司新闻',
+    title: '洗得亮推进绿色环保型日化液体洗涤产品项目',
+    date: '2025.02.06',
+    summary: '项目分三期规划推进，覆盖织物洗护、厨卫清洁、个人护理和商用定制等方向。',
+    detail: '项目以新型高效洗衣液为起点，逐步拓展厨房、家居、卫浴、个人护理与商业清洁产品，围绕绿色配方、自动化生产和品质管理构建长期产业能力。',
+  },
+  {
+    slug: 'strategy-2035',
+    category: '战略规划',
+    title: '洗得亮发布2026-2035十年发展战略',
+    date: '2026.05.25',
+    summary: '公司围绕品牌引领、智能经营、绿色健康构建长期发展路线图，逐步对标公众公司治理能力。',
+    detail: '十年发展战略分为筑基固本、规模扩张、生态协同三个阶段，持续推进产品技术、品牌建设、智能制造、组织能力、绿色供应链与国际化布局。',
+  },
+  {
+    slug: 'pomegranate-bio',
+    category: '研发动态',
+    title: '“石榴+”生物科技平台进入产品概念储备阶段',
+    date: '2026.06.12',
+    summary: '平台聚焦石榴植物活性成分在护色、抗氧化、抗菌等方向的应用研究。',
+    detail: '依托枣庄石榴产业资源，平台围绕石榴皮多酚、石榴籽油等植物成分开展应用探索，推动区域特色资源与绿色洗护产品研发相结合。',
+  },
+  {
+    slug: 'belt-road',
+    category: '跨境业务',
+    title: '洗得亮规划一带一路跨境业务与国际化产品路径',
+    date: '2026.06.20',
+    summary: '公司将从跨境电商、东南亚样板市场、国际展会和海外合规体系逐步推进国际化布局。',
+    detail: '国际化路径以跨境电商和东南亚市场为切入点，结合当地气候、使用习惯与渠道特点推进产品适配，持续建设面向海外市场的品牌与供应链能力。',
+  },
 ];
 
-export const jobs = [
-  { slug: 'brand-manager', title: '品牌经理', department: '品牌中心', category: '品牌与市场', location: '上海', type: '社会招聘', experience: '3–5 年', posted: '2026.06.10' },
-  { slug: 'product-researcher', title: '产品研发工程师', department: '研发中心', category: '研发与品质', location: '苏州', type: '社会招聘', experience: '3 年以上', posted: '2026.06.08' },
-  { slug: 'content-editor', title: '宠物内容编辑', department: '内容中心', category: '品牌与市场', location: '上海', type: '社会招聘', experience: '1–3 年', posted: '2026.06.02' },
-  { slug: 'quality-specialist', title: '质量管理专员', department: '品质中心', category: '研发与品质', location: '苏州', type: '校园招聘', experience: '应届可投', posted: '2026.05.26' },
-];
 
-export const responsibilityPrograms = [
-  { slug: 'public-welfare', number: '01', title: '公益救助', en: 'PUBLIC WELFARE', focus: '物资支持 · 科普协作', summary: '围绕救助机构的实际需求，提供清洁物资、日常养护知识与持续沟通支持。', status: '持续项目', partner: '合作机构信息待正式公布' },
-  { slug: 'animal-care', number: '02', title: '流浪动物关爱', en: 'ANIMAL CARE', focus: '待领养动物 · 志愿行动', summary: '关注待领养动物的清洁、生活环境与领养前准备，支持更稳定的关爱行动。', status: '长期关注', partner: '公益伙伴信息待正式公布' },
-  { slug: 'green-production', number: '03', title: '绿色生产', en: 'GREEN PRODUCTION', focus: '能源管理 · 流程优化', summary: '从生产过程、能源使用与内部管理入手，逐步建立可追踪的绿色实践。', status: '推进中', partner: '阶段数据待审核后发布' },
-  { slug: 'eco-packaging', number: '04', title: '环保包装', en: 'ECO PACKAGING', focus: '包装减量 · 回收友好', summary: '关注包装材料、结构减量与回收提示，让环保信息更清楚、更易执行。', status: '持续改进', partner: '包装方案按产品逐步更新' },
-];
-
-export function findNavItem(pathname) {
-  return navigation.flatMap((item) => item.children.map(([label, path]) => ({ label, path, parent: item })))
-    .find((item) => pathname === item.path);
-}

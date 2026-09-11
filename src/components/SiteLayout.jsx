@@ -6,9 +6,9 @@ import SeoManager from './SeoManager';
 
 function BrandMark() {
   return (
-    <Link className="brand-mark" to="/" aria-label="萌净集团首页">
+    <Link className="brand-mark" to="/" aria-label="洗得亮科技首页">
       <span className="brand-symbol"><i /><i /><i /></span>
-      <span><strong>萌净</strong><small>MENGJING GROUP</small></span>
+      <span><strong>洗得亮</strong><small>XIDELIANG TECH</small></span>
     </Link>
   );
 }
@@ -111,21 +111,54 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-main container">
-        <div className="footer-brand"><BrandMark /><p>围绕宠物清洁、健康生活与绿色家居，创造人与宠物友好共生的洁净生活方式。</p></div>
+        <div className="footer-brand"><BrandMark /><p>坚持绿色健康使命，围绕日化洗护、家庭清洁、品质保障与绿色环保，建设可信赖的民族日化品牌。</p></div>
         <div className="footer-nav footer-nav-desktop">
-          {navigation.map((item) => <div key={item.path}><Link to={item.path}>{item.label}</Link>{item.children.slice(0, 3).map(([label, path]) => <Link to={path} key={path}>{label}</Link>)}</div>)}
+          {navigation.map((item) => <div key={item.path}><Link to={item.path}>{item.label}</Link>{item.children.map(([label, path]) => <Link to={path} key={path}>{label}</Link>)}</div>)}
         </div>
         <div className="footer-nav-mobile">
           {navigation.map((item) => <details key={item.path}><summary>{item.label}<ChevronDown size={17} /></summary><div><Link to={item.path}>栏目首页</Link>{item.children.map(([label, path]) => <Link to={path} key={path}>{label}</Link>)}</div></details>)}
         </div>
-        <div className="footer-contact"><span className="eyebrow">CONTACT</span><h3>期待与您建立联系</h3><p>企业服务热线：待确认<br />商务联系邮箱：待确认<br />办公地址：待确认</p><Link className="text-link light" to="/contact">联系我们 <ArrowUpRight size={16} /></Link></div>
+        <div className="footer-contact"><span className="eyebrow">COOPERATION</span><h3>共建绿色日化产业生态</h3><p>面向经销加盟、商用定制、供应链协同与产业合作，携手伙伴创造长期价值。</p><Link className="text-link light" to="/cooperation">了解合作方向 <ArrowUpRight size={16} /></Link></div>
       </div>
-      <div className="footer-bottom container"><span>© 2026 萌净集团 版权所有</span><div><Link to="/privacy">隐私政策</Link><Link to="/legal">法律声明</Link></div></div>
+      <div className="footer-bottom container"><span>© {new Date().getFullYear()} 山东洗得亮科技公司 版权所有</span><div><Link to="/about">关于洗得亮</Link><Link to="/cooperation">合作招商</Link></div></div>
     </footer>
   );
 }
 
 export default function SiteLayout({ children }) {
   const location = useLocation();
-  return <><SeoManager /><a className="skip-link" href="#main-content">跳至主要内容</a><Header /><main id="main-content" tabIndex={-1}>{children}</main><Footer />{location.pathname !== '/contact' && <nav className="mobile-contact-dock" aria-label="快捷联系"><Link to="/contact">联系我们</Link><Link to="/cooperation">商务合作 <ArrowUpRight size={15} /></Link></nav>}</>;
+
+  // 每次路由切换后,为页面上的 [data-reveal] 区块建立“滚动进入视口再显现”的观察器
+  useEffect(() => {
+    const items = document.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach((element) => element.classList.add('reveal-in'));
+      return undefined;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
+        }
+      }),
+      { threshold: 0.12, rootMargin: '0px 0px -6% 0px' },
+    );
+    items.forEach((element) => {
+      if (!element.classList.contains('reveal-in')) observer.observe(element);
+    });
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
+  // HashRouter 下原生 #anchor 会改变路由,这里用平滑滚动替代
+  const jumpToMain = (event) => {
+    event.preventDefault();
+    const main = document.getElementById('main-content');
+    if (!main) return;
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+    main.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    main.focus({ preventScroll: true });
+  };
+
+  return <><SeoManager /><a className="skip-link" href="#main-content" onClick={jumpToMain}>跳至主要内容</a><Header /><main id="main-content" tabIndex={-1}>{children}</main><Footer />{location.pathname !== '/contact' && <nav className="mobile-contact-dock" aria-label="快捷联系"><Link to="/contact">联系我们</Link><Link to="/cooperation">商务合作 <ArrowUpRight size={15} /></Link></nav>}</>;
 }

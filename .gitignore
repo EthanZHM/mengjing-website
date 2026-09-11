@@ -4,3 +4,5 @@ dist/
 .env
 .env.local
 npm-debug.log*
+企业文化.docx
+*.docx

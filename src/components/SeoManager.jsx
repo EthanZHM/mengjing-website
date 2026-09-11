@@ -1,55 +1,41 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { articles, brands, jobs, navigation, newsItems, products, responsibilityPrograms, sectionMeta } from '../data/siteData';
+import { detailPages, newsItems, productCategories, sectionMeta } from '../data/siteData';
 
-const defaultDescription = '萌净集团围绕宠物清洁、健康生活与绿色家居，持续建设专业产品、品牌与服务体系。';
+const defaultDescription = '山东洗得亮科技公司坚持绿色健康使命，围绕植物原料、产品创新、绿色智造、品质管控和日化产品矩阵，建设民族日化品牌。';
 
 function findMeta(pathname) {
-  if (pathname === '/') return { title: '萌净集团｜洁净每一次陪伴', description: defaultDescription, type: 'website' };
-
-  if (pathname === '/privacy') return { title: '隐私政策｜萌净集团', description: '萌净集团网站隐私政策。', type: 'website', robots: 'noindex,follow' };
-  if (pathname === '/legal') return { title: '法律声明｜萌净集团', description: '萌净集团网站法律声明。', type: 'website', robots: 'noindex,follow' };
+  if (pathname === '/') return { title: '山东洗得亮科技｜绿色日化实业品牌', description: defaultDescription, type: 'website' };
+  if (pathname === '/contact') return { title: '合作联系｜山东洗得亮科技', description: '了解山东洗得亮科技经销加盟、商用定制、供应链协同与产业合作方向。', type: 'website' };
 
   const parts = pathname.split('/').filter(Boolean);
   const section = parts[0];
-  const sectionInfo = sectionMeta[section];
-  const knownStandalone = ['/contact', '/cooperation'];
-  if (!sectionInfo && !knownStandalone.includes(pathname)) return { title: '页面未找到｜萌净集团', description: '您访问的页面不存在或已移动。', type: 'website', robots: 'noindex,follow' };
-  let title = sectionInfo?.title || '萌净集团';
-  let description = sectionInfo?.intro || defaultDescription;
-  let type = 'website';
+  let title = sectionMeta[section]?.title || '山东洗得亮科技';
+  let description = sectionMeta[section]?.intro || defaultDescription;
 
-  const navChild = navigation.flatMap((item) => item.children.map(([label, path]) => ({ label, path }))).find((item) => item.path === pathname);
-  if (navChild) title = navChild.label;
+  if (section === 'products' && parts[1]) {
+    const product = productCategories.find((item) => item.slug === parts[1]);
+    if (product) {
+      title = product.title;
+      description = product.summary;
+    }
+  }
 
-  if (section === 'products' && parts.length === 3) {
-    const item = products.find((entry) => entry.slug === parts[2]);
-    if (item) { title = item.name; description = `${item.scenario}，了解产品规格、适用对象、功效信息、使用方法与注意事项。`; }
+  if (section === 'news' && parts[1]) {
+    const item = newsItems.find((entry) => entry.slug === parts[1]);
+    if (item) {
+      title = item.title;
+      description = item.summary;
+    }
   }
-  if (section === 'brands' && parts[1]) {
-    const item = brands.find((entry) => entry.slug === parts[1]);
-    if (item) { title = item.name; description = `${item.positioning}。${item.description}`; }
-  }
-  if (section === 'pet-life' && parts.length === 3) {
-    const item = articles.find((entry) => entry.slug === parts[2]);
-    if (item) { title = item.title; description = item.summary; type = 'article'; }
-  }
-  if (section === 'news' && parts.length === 3) {
-    const item = newsItems.find((entry) => entry.slug === parts[2]);
-    if (item) { title = item.title; description = item.summary; type = 'article'; }
-  }
-  if (section === 'responsibility' && parts[1]) {
-    const item = responsibilityPrograms.find((entry) => entry.slug === parts[1]);
-    if (item) { title = item.title; description = item.summary; }
-  }
-  if (section === 'careers' && parts[1] === 'jobs' && parts[2]) {
-    const item = jobs.find((entry) => entry.slug === parts[2]);
-    if (item) { title = `${item.title}招聘`; description = `萌净集团${item.department}${item.title}岗位，工作地点${item.location}，了解岗位职责、任职要求与投递方式。`; }
-  }
-  if (pathname === '/contact') { title = '联系我们'; description = '联系萌净集团，了解商务合作、产品咨询、公益协作、媒体沟通与人才招聘。'; }
-  if (pathname === '/cooperation') { title = '商务合作'; description = '了解萌净集团渠道、品牌、供应链、技术与公益合作方向。'; }
 
-  return { title: `${title}｜萌净集团`, description, type };
+  const detail = detailPages[`${section}/${parts[1]}`];
+  if (detail) {
+    title = detail.title;
+    description = detail.lead;
+  }
+
+  return { title: `${title}｜山东洗得亮科技`, description, type: section === 'news' && parts[1] ? 'article' : 'website' };
 }
 
 function setMeta(selector, attributes) {
@@ -66,29 +52,54 @@ export default function SeoManager() {
 
   useEffect(() => {
     const meta = findMeta(pathname);
+    const siteUrl = import.meta.env.VITE_SITE_URL?.replace(/\/$/, '');
     document.title = meta.title;
     setMeta('meta[name="description"]', { name: 'description', content: meta.description });
     setMeta('meta[name="robots"]', { name: 'robots', content: meta.robots || 'index,follow,max-image-preview:large' });
+    setMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: '洗得亮科技' });
+    setMeta('meta[property="og:locale"]', { property: 'og:locale', content: 'zh_CN' });
     setMeta('meta[property="og:title"]', { property: 'og:title', content: meta.title });
     setMeta('meta[property="og:description"]', { property: 'og:description', content: meta.description });
     setMeta('meta[property="og:type"]', { property: 'og:type', content: meta.type });
-    setMeta('meta[property="og:locale"]', { property: 'og:locale', content: 'zh_CN' });
+    setMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
+    setMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: meta.title });
+    setMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: meta.description });
 
-    const siteUrl = import.meta.env.VITE_SITE_URL?.replace(/\/$/, '');
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (siteUrl) {
-      if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.rel = 'canonical';
+        document.head.appendChild(canonical);
+      }
       canonical.href = `${siteUrl}${pathname}`;
       setMeta('meta[property="og:url"]', { property: 'og:url', content: canonical.href });
+      const shareImage = `${siteUrl}/editorial-images/zaozhuang-pomegranate-orchard.jpg`;
+      setMeta('meta[property="og:image"]', { property: 'og:image', content: shareImage });
+      setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: '山东枣庄峄城区连片石榴园航拍' });
+      setMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: shareImage });
     } else {
       canonical?.remove();
       document.head.querySelector('meta[property="og:url"]')?.remove();
+      document.head.querySelector('meta[property="og:image"]')?.remove();
+      document.head.querySelector('meta[name="twitter:image"]')?.remove();
     }
 
     let structuredData = document.getElementById('organization-schema');
     if (pathname === '/') {
-      if (!structuredData) { structuredData = document.createElement('script'); structuredData.id = 'organization-schema'; structuredData.type = 'application/ld+json'; document.head.appendChild(structuredData); }
-      structuredData.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Organization', name: '萌净集团', description: defaultDescription, ...(siteUrl ? { url: siteUrl } : {}) });
+      if (!structuredData) {
+        structuredData = document.createElement('script');
+        structuredData.id = 'organization-schema';
+        structuredData.type = 'application/ld+json';
+        document.head.appendChild(structuredData);
+      }
+      structuredData.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: '山东洗得亮科技公司',
+        description: defaultDescription,
+        ...(siteUrl ? { url: siteUrl } : {}),
+      });
     } else {
       structuredData?.remove();
     }
