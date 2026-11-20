@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="960" viewBox="0 0 1200 960" role="img" aria-labelledby="kitchen-title">
+  <title id="kitchen-title">浅釉陶器与竹刷的厨房洁护插画</title>
+  <defs>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#eeeadc"/><stop offset=".58" stop-color="#d7d6c2"/><stop offset="1" stop-color="#b7b8a0"/>
+    </linearGradient>
+    <radialGradient id="window" cx=".28" cy=".17" r=".82">
+      <stop stop-color="#fffaee" stop-opacity=".95"/><stop offset="1" stop-color="#fffaee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="surface" x1=".13" y1=".1" x2=".85" y2=".9">
+      <stop stop-color="#fffbef"/><stop offset=".47" stop-color="#ebe8d6"/><stop offset="1" stop-color="#ccceaf"/>
+    </linearGradient>
+    <linearGradient id="edge" x1=".17" y1=".1" x2=".82" y2=".95">
+      <stop stop-color="#faf7e8"/><stop offset=".37" stop-color="#d5d4bd"/><stop offset="1" stop-color="#949981"/>
+    </linearGradient>
+    <linearGradient id="glaze" x1=".14" y1=".1" x2=".83" y2=".94">
+      <stop stop-color="#9ba68f"/><stop offset=".22" stop-color="#c5cbb2"/><stop offset=".58" stop-color="#e4e5cc"/><stop offset="1" stop-color="#f5efdf"/>
+    </linearGradient>
+    <linearGradient id="dish-floor" x1=".17" y1=".1" x2=".86" y2=".84">
+      <stop stop-color="#e4e4cf"/><stop offset=".55" stop-color="#e7e8d3"/><stop offset="1" stop-color="#d1d7bb"/>
+    </linearGradient>
+    <linearGradient id="bamboo" x1=".04" y1=".05" x2=".9" y2=".95">
+      <stop stop-color="#d9ab73"/><stop offset=".27" stop-color="#e8bd89"/><stop offset=".65" stop-color="#ba8251"/><stop offset="1" stop-color="#8a5938"/>
+    </linearGradient>
+    <linearGradient id="bristles" x1="0" y1=".03" x2=".98" y2=".98">
+      <stop stop-color="#b78455"/><stop offset=".32" stop-color="#d7b288"/><stop offset=".68" stop-color="#d4a971"/><stop offset="1" stop-color="#95643e"/>
+    </linearGradient>
+    <pattern id="stone-grain" width="39" height="34" patternUnits="userSpaceOnUse">
+      <path d="M4 7h1M26 28h1M17 13h2M36 20h1M9 29h1M30 4h1M13 22h1M33 14h1" stroke="#717154" stroke-opacity=".22" stroke-linecap="round" stroke-width="1"/>
+      <path d="M2 16h1M23 20h1M9 2h1M36 33h1M19 31h1M23 10h1" stroke="#fff5df" stroke-opacity=".62" stroke-linecap="round" stroke-width="1"/>
+    </pattern>
+    <pattern id="fiber-grain" width="5" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(8)">
+      <path d="M1 0v8M3.5 0v8" stroke="#765233" opacity=".28" stroke-width=".8"/>
+    </pattern>
+    <filter id="tray-shadow" x="-20%" y="-30%" width="150%" height="175%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="detail-shadow" x="-32%" y="-32%" width="175%" height="185%"><feGaussianBlur stdDeviation="13"/></filter>
+  </defs>
+  <rect width="1200" height="960" fill="url(#stone)"/>
+  <rect width="1200" height="960" fill="url(#window)"/>
+  <rect width="1200" height="960" fill="url(#stone-grain)" opacity=".58"/>
+  <path d="M0 335 895 0h220L0 489Z" fill="#fffaf0" opacity=".14"/>
+  <path d="M0 783 1200 386" fill="none" stroke="#686e58" stroke-width="2" opacity=".12"/>
+  <path d="M0 779 1200 382" fill="none" stroke="#faf5e6" stroke-width="2" opacity=".39"/>
+  <g transform="rotate(-13 562 500)">
+    <path d="M234 370q-8-71 65-90l433 1q62 4 76 64l32 316q3 80-76 96l-440-9q-72-4-86-70Z" transform="translate(33 28)" fill="#5c614e" opacity=".32" filter="url(#tray-shadow)"/>
+    <path d="M226 341q-7-61 56-78l464-4q65 3 73 72l17 310q2 64-63 82l-462 3q-69-3-77-65Z" fill="url(#edge)"/>
+    <path d="M224 333q-4-63 57-76l466-6q65 1 72 67l15 308q3 75-66 83l-464 8q-68 1-74-68Z" fill="url(#surface)"/>
+    <path d="M235 334q-2-59 51-68l452-7q58-2 68 62" fill="none" stroke="#fffdf2" stroke-width="5" stroke-linecap="round" opacity=".84"/>
+    <path d="M252 639q-1 44 49 50l465-5q45-4 44-55" fill="none" stroke="#a8ae91" stroke-width="2.5" stroke-linecap="round" opacity=".38"/>
+    <path d="M278 339q-1-40 44-44l389-8q49 1 51 42l17 282q1 53-47 57l-384 7q-54-1-61-48Z" fill="url(#glaze)"/>
+    <path d="M297 360q-3-39 43-44l357-8q39 0 44 38l15 250q-1 48-48 52l-350 6q-49 0-53-43Z" fill="url(#dish-floor)" opacity=".94"/>
+    <path d="M311 357q5-31 40-33l330-7M321 609q5 35 48 35l336-6q36 1 43-32" fill="none" stroke="#f8f4e3" stroke-width="3.5" stroke-linecap="round" opacity=".62"/>
+    <path d="M351 391c28-11 68-13 121-15l111-2m-217 37q39-9 86-8m44 181q76 3 132-10m-76-17q46-2 64-6" fill="none" stroke="#fbf8ec" opacity=".57" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M280 338q-1-40 44-44l389-8q50 1 52 42l17 282q1 53-47 57l-385 7q-55-1-61-48Z" fill="url(#stone-grain)" opacity=".47"/>
+  </g>
+  <g transform="rotate(29 812 426)">
+    <path d="M782 225q0-31 32-32h9q34 0 35 24l-4 235q47 23 49 72v90q-6 64-86 68-77-5-81-54v-94q3-51 43-75Z" transform="translate(18 20)" fill="#545944" opacity=".3" filter="url(#detail-shadow)"/>
+    <path d="M775 470q44-24 85-3 37 20 33 67l-1 70q-11 54-71 58-80 0-81-63v-61q-1-43 35-68Z" fill="url(#bristles)"/>
+    <path d="M775 470q44-24 85-3 37 20 33 67l-1 70q-11 54-71 58-80 0-81-63v-61q-1-43 35-68Z" fill="url(#fiber-grain)" opacity=".96"/>
+    <path d="M740 555q9 22 12 62m-4-64q4 32 4 67m7-60q-1 36 8 72m-1-69q3 36 9 76m3-73q-1 42 8 77m3-78q-1 39 8 83m4-82q-2 44 7 88m5-87q-2 44 6 85m5-85q1 36 4 87m8-87q4 44 1 85m6-89q7 49 2 86m6-86q10 38 3 82m7-86q9 37 1 83m7-88q7 35 2 76m3-82q8 39 4 72m3-78q9 43 2 64" fill="none" stroke="#efd0a2" stroke-width="1.7" stroke-linecap="round" opacity=".52"/>
+    <path d="M790 224q0-28 28-29 28 0 32 24l-10 244q-6 24-25 26l-25-7q-13-5-13-25Z" fill="#8d5d3c"/>
+    <path d="M785 221q-1-28 29-30 32 0 32 24l-10 244q-6 24-25 26l-25-7q-13-5-13-25Z" fill="url(#bamboo)"/>
+    <path d="M792 229q-1-29 21-30m-19 58-9 183m13-173-7 163m39-216-9 231m4-225-10 222" fill="none" stroke="#f7d6a2" stroke-width="2" stroke-linecap="round" opacity=".54"/>
+    <path d="M775 458q21 9 48 6l-2 23q-26 6-48-5Z" fill="#a65f45"/>
+    <path d="M773 465q24 10 50 5m-50 3q24 10 50 5" fill="none" stroke="#e3a989" stroke-width="1.5" opacity=".75"/>
+    <path d="M752 510q13-55 60-49 64-3 77 46 19 62-63 72-90-2-74-69Z" fill="#8d5a39"/>
+    <path d="M750 504q13-51 60-53 62-3 79 50 17 58-65 68-89-2-74-65Z" fill="url(#bamboo)"/>
+    <path d="M755 512q8-51 56-54 45-3 60 21" fill="none" stroke="#f9d4a2" stroke-width="2.6" stroke-linecap="round" opacity=".77"/>
+    <path d="M770 506q23-32 61-28m-69 41q27-30 78-29m-71 41q27-29 85-28m-67 41q43-34 76-24m-56 31q18-19 46-20" fill="none" stroke="#90633f" stroke-width="1.7" opacity=".5" stroke-linecap="round"/>
+  </g>
+</svg>
